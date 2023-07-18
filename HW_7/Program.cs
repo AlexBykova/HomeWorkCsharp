@@ -78,11 +78,7 @@
 
 // void FindNumberInMatrix (int[,] matrix, int row, int column)
 // {
-//     if (row>=matrix.GetLength(0) || column>=matrix.GetLength(1))
-//     {
-//         Console.WriteLine("Элемента с данными параметрами нет.");
-//     }
-//     else 
+//     if (row<matrix.GetLength(0) && column<matrix.GetLength(1) && row>=0 && column>=0)
 //     {
 //         for (int i=0; i<matrix.GetLength(0); i++)
 //         {
@@ -94,6 +90,10 @@
 //                 }
 //             }
 //         }
+//     }
+//     else 
+//     {
+//         Console.WriteLine("Элемента с данными параметрами нет.");
 //     }
 // }
 
@@ -156,12 +156,13 @@
 // {
 //     for (int j=0; j<matrix.GetLength(1); j++)
 //     {
-//         int sum = 0;
+//         double sum = 0;
 //         for (int i=0; i<matrix.GetLength(0); i++)
 //         {
 //             sum+=matrix[i,j];
 //         }
-//         Console.WriteLine($"Сумма элементов {j}-го столбца = {sum}");
+//         double mean = sum/matrix.GetLength(0);
+//         Console.WriteLine($"Среднее арифметическое элементов {j+1}-го столбца = {Math.Round(mean, 3)}");
 //     }
 // }
 
